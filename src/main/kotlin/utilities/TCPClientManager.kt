@@ -16,6 +16,7 @@ class StampingTCPClient {
     fun createSocketFromSettings () {
         val text = File("settings.json").readText()
         val settings = Json.decodeFromString<Settings>(text)
+
         socket = Socket(settings.Address, settings.Port.toInt())
     }
 
