@@ -1,6 +1,6 @@
 package utilities
 
-import com.google.gson.Gson
+import kotlinx.serialization.json.Json
 import serializables.Settings
 import java.io.File
 import java.net.Socket
@@ -14,9 +14,8 @@ class StampingTCPClient {
     }
 
     fun createSocketFromSettings () {
-        val gson = Gson()
-        val file = File("settings.json")
-        var settings = gson.fromJson(file.readText(), Settings::class.java)
+        val text = File("settings.json").readText()
+        val settings = Json.decodeFromString<Settings>(text)
         socket = Socket(settings.Address, settings.Port.toInt())
     }
 

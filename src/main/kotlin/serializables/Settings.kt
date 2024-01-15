@@ -1,10 +1,9 @@
 package serializables
 
+import kotlinx.serialization.Serializable
 
 
 /** Data class used to store settings in settings.json*/
-
-data class Settings (
-    var Address :String,
-    var Port :String,
+@Serializable
+data class Settings (val Address :String, val Port :String
 )
