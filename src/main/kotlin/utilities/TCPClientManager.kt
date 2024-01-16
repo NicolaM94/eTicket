@@ -9,10 +9,6 @@ class StampingTCPClient {
 
     private var socket :Socket = Socket()
 
-    fun createSocket (ip :String, port :String) {
-        socket = Socket(ip,port.toInt())
-    }
-
     fun createSocketFromSettings () {
         val text = File("settings.json").readText()
         val settings = Json.decodeFromString<Settings>(text)
