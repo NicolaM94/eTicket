@@ -29,10 +29,10 @@ compose.desktop {
             packageName = "eTicket"
             packageVersion = "1.0.0"
             windows {
+                this.dirChooser = true
                 shortcut = true
                 iconFile.set(project.file("stamp-icon.ico"))
                 console = false
-                menu = true
             }
         }
     }
