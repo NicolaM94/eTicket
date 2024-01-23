@@ -29,7 +29,8 @@ compose.desktop {
             packageName = "eTicket"
             packageVersion = "1.0.0"
             windows {
-                this.dirChooser = true
+                installationPath = System.getProperty("user.home")
+                this.dirChooser
                 shortcut = true
                 iconFile.set(project.file("stamp-icon.ico"))
                 console = false

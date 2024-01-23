@@ -124,7 +124,7 @@ fun MainWindow  () {
         val stc = StampingTCPClient()
         stc.createSocketFromSettings()
         println("Writing to client...")
-        stc.write("$username:$password&-!->\n")
+        stc.write("$username:$password:\n")
         outcome = stc.listen()
         println("Done!")
 
